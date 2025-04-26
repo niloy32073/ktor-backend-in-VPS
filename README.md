@@ -35,7 +35,7 @@ This document provides a step-by-step guide to deploy a Ktor backend application
 
 ## Step 1: Set Up Local Environment
 1. **Install JDK**:
-   - Download and install Amazon Corretto 20 (or OpenJDK 17 for production) from [aws.amazon.com/corretto](https://aws.amazon.com/corretto/).
+   - Download and install Amazon Corretto 20 (or OpenJDK 17 for production) from [aws.amazon.com/corretto](https://aws.amazon.com/corretto/). You can us your suitable one.
    - Set `JAVA_HOME`:
      ```powershell
      $env:JAVA_HOME = "C:\Program Files\Amazon Corretto\jdk20.0.2_10"
@@ -47,26 +47,15 @@ This document provides a step-by-step guide to deploy a Ktor backend application
      ```
 
 2. **Clone or Open Project**:
-   - Navigate to your project directory:
+   - Navigate to your project directory: (for example)
      ```powershell
-     cd C:\Users\mdnra\IdeaProjects\Locker-Backend
+     cd C:\Users\YourUserName\IdeaProjects\Locker-Backend
      ```
    - Ensure `build.gradle.kts` includes:
      ```kotlin
      plugins {
          kotlin("jvm")
          id("io.ktor.plugin")
-     }
-
-     dependencies {
-         implementation("io.ktor:ktor-server-core")
-         implementation("io.ktor:ktor-server-netty")
-         implementation("io.ktor:ktor-server-auth")
-         implementation("io.ktor:ktor-server-auth-jwt")
-         implementation("org.jetbrains.exposed:exposed-core:0.41.1")
-         implementation("org.jetbrains.exposed:exposed-jdbc:0.41.1")
-         implementation("org.postgresql:postgresql:42.6.0")
-         implementation("com.zaxxer:HikariCP:5.0.1")
      }
 
      tasks {
